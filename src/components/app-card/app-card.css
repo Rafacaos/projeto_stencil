@@ -1,0 +1,67 @@
+.card {
+  position: relative;
+  background: #282828;
+  display: inline-block;
+  padding: 20px 20px 16px;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 16px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card__imagem {
+  width: 157px;
+  height: 157px;
+  margin-bottom: 16px;
+}
+
+.card__titulo {
+  color: #ffffff;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  line-height: 20px;
+}
+
+.card__titulo--menor {
+  color: #b3b3b3;
+  font-size: 11px;
+  display: block;
+  margin-top: 4px;
+}
+
+.card__titulo--menor:hover {
+  text-decoration: underline;
+}
+
+
+.play {
+  opacity: 0;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  background: #1db954;
+  color: #ffffff;
+}
+
+.play:focus {
+  outline: none;
+}
+
+.play:hover {
+  width: 42px;
+  height: 42px;
+  bottom: 15px;
+  right: 15px;
+}
+
+.play--open {
+  opacity: 1;
+}

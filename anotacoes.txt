@@ -1,0 +1,7 @@
+atualizou o node
+entrou na pasta de 'projetos'
+rodou 'npm init stencil'
+criou o projeto com o nome 'componentes'
+abriu o projeto 'componentes' no VSCode
+rodou 'npm install'
+rodou 'npm run start'
