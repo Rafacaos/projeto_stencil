@@ -3,5 +3,38 @@ entrou na pasta de 'projetos'
 rodou 'npm init stencil'
 criou o projeto com o nome 'componentes'
 abriu o projeto 'componentes' no VSCode
+
+
 rodou 'npm install'
 rodou 'npm run start'
+
+-----------------------------------------
+criar um novo componentes 'app-album'
+   /// npm run generate
+criar o state
+
+fazer a chamada fetch() dentro dele (dentro do componentWillLoad)
+    ///
+    return fetch('url').then(function(resposta) {
+        return resposta.json().then(function (albuns) {
+            this.albuns = albuns;
+            return albuns
+        })
+    })
+    /////
+
+fazer um for no resultado
+mostrar um album por objeto do array
+
+render() {
+  return (
+    <div>
+      {this.todos.map((todo) =>
+        <div>
+          <div>{todo.taskName}</div>
+          <div>{todo.isCompleted}</div>
+        </div>
+      )}
+    </div>
+  )
+}

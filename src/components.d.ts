@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppAlbum {
+    }
     interface AppCard {
         "imagem": string;
         "link": string;
@@ -28,6 +30,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppAlbumElement extends Components.AppAlbum, HTMLStencilElement {
+    }
+    var HTMLAppAlbumElement: {
+        prototype: HTMLAppAlbumElement;
+        new (): HTMLAppAlbumElement;
+    };
     interface HTMLAppCardElement extends Components.AppCard, HTMLStencilElement {
     }
     var HTMLAppCardElement: {
@@ -41,11 +49,14 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "app-album": HTMLAppAlbumElement;
         "app-card": HTMLAppCardElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface AppAlbum {
+    }
     interface AppCard {
         "imagem"?: string;
         "link"?: string;
@@ -67,6 +78,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "app-album": AppAlbum;
         "app-card": AppCard;
         "my-component": MyComponent;
     }
@@ -75,6 +87,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-album": LocalJSX.AppAlbum & JSXBase.HTMLAttributes<HTMLAppAlbumElement>;
             "app-card": LocalJSX.AppCard & JSXBase.HTMLAttributes<HTMLAppCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
